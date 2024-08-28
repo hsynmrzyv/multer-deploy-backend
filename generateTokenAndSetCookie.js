@@ -5,7 +5,11 @@ export const generateTokenAndSetCookie = (id, response) => {
   const token = jwt.sign({ id }, process.env.JWT_SECRET);
 
   // Set the JWT as a cookie
-  response.cookie("jwt", token);
+  response.cookie("jwt", token, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "None",
+  });
 
   return token;
 };

@@ -6,7 +6,6 @@ import User from "../models/user.model.js";
 // Utils
 import { generateTokenAndSetCookie } from "../generateTokenAndSetCookie.js";
 
-
 export const signIn = async (request, response) => {
   const { email, password } = request.body;
 

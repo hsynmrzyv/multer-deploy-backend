@@ -18,7 +18,7 @@ const MONGODB_URL = process.env.MONGODB_URL;
 
 app.use(
   cors({
-    origin: "https://multer-deploy-frontend.vercel.app/sign-in",
+    origin: "https://multer-deploy-frontend.vercel.app",
     credentials: true,
   })
 );
